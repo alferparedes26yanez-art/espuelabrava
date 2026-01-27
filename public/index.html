@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espuela Brava | Premium Betting</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="login-section" class="login-overlay">
+        <div class="login-card">
+            <h1 style="color: #d4af37; margin-bottom: 10px;">ESPUELA BRAVA</h1>
+            <p style="color: #888; margin-bottom: 20px;">Ingreso Privado</p>
+            <input type="text" id="user-input" placeholder="Usuario">
+            <input type="password" id="pass-input" placeholder="Contraseña">
+            <button onclick="ejecutarLogin()" style="background: #d4af37; color: #000; font-weight: bold;">ENTRAR</button>
+        </div>
+    </div>
+
+    <div id="main-dashboard" class="hidden">
+        
+        <nav class="navbar">
+            <div class="logo">🥊 Espuela Brava</div>
+            <div class="user-info">
+                <div class="saldo-box">
+                    <span>SALDO DISPONIBLE</span>
+                    <strong id="span-cliente-saldo">$0.00</strong>
+                </div>
+                <div class="profile">
+                    <span id="span-cliente-nombre">Usuario</span>
+                    <div class="avatar">🐓</div>
+                </div>
+            </div>
+        </nav>
+
+        <div id="client-view" class="hidden">
+            <div class="game-container">
+                <div class="timer-container">
+                    <div class="timer-circle">
+                        <span id="reloj-display">00</span>
+                        <small>SEGUNDOS</small>
+                    </div>
+                    <div id="status-tag" class="status-open">● APUESTAS ABIERTAS</div>
+                </div>
+
+                <h2 class="pelea-titulo">Pelea No. <span id="num-pelea-display">1</span></h2>
+                <p class="subtitulo">Arena Principal • Derby Invernal</p>
+
+                <div class="apuesta-selector">
+                    <span>CUÁNTO QUIERES APOSTAR:</span>
+                    <div class="monto-control">
+                        <input type="number" id="monto-apuesta-cliente" value="10">
+                    </div>
+                </div>
+
+                <div class="bet-grid">
+                    <button class="card rojo" onclick="clienteAposta('Rojo')">
+                        <div class="icon">🐓</div>
+                        <h3>GALLO ROJO</h3>
+                        <span class="cuota-badge">CUOTA: <b id="cuota-rojo-display">1.8x</b></span>
+                    </button>
+
+                    <button class="card empate" onclick="clienteAposta('Empate')">
+                        <div class="icon">⚖️</div>
+                        <h3>EMPATE</h3>
+                        <span class="cuota-badge">TABLAS</span>
+                    </button>
+
+                    <button class="card azul" onclick="clienteAposta('Azul')">
+                        <div class="icon">🐓</div>
+                        <h3>GALLO AZUL</h3>
+                        <span class="cuota-badge">CUOTA: <b id="cuota-azul-display">1.8x</b></span>
+                    </button>
+                </div>
+                <p class="footer-msg">Las apuestas se bloquean al llegar a cero.</p>
+            </div>
+        </div>
+
+        <div id="admin-view" class="hidden admin-section">
+            <h2 style="color: #d4af37; border-bottom: 2px solid #333; padding-bottom: 10px;">Panel Master Administrativo</h2>
+            
+            <div class="admin-grid">
+                <div class="admin-card">
+                    <h3>👥 Crear Clientes</h3>
+                    <input type="text" id="reg-nombre" placeholder="Nombre">
+                    <input type="text" id="reg-user" placeholder="Usuario">
+                    <input type="text" id="reg-pass" placeholder="Clave">
+                    <button onclick="registrarNuevoCliente()" style="background: #27ae60;">CREAR USUARIO</button>
+                    
+                    <h4>Lista de Clientes</h4>
+                    <div id="lista-usuarios-admin" class="scroll-lista"></div>
+                </div>
+
+                <div class="admin-card">
+                    <h3>⏱️ Control de Pelea</h3>
+                    <label>Número de Pelea:</label>
+                    <input type="number" id="input-num-pelea" value="1">
+                    <button onclick="actualizarPeleaAdmin()" style="background: #2980b9;">ACTUALIZAR PELEA</button>
+                    <hr>
+                    <label>Segundos:</label>
+                    <input type="number" id="input-segundos" value="60">
+                    <button onclick="controlarApuestas(true)" style="background: #d4af37; color: #000;">ABRIR PELEA</button>
+                    <button onclick="controlarApuestas(false)" style="background: #c0392b;">CERRAR</button>
+                    <hr>
+                    <label>Cuota:</label>
+                    <input type="number" id="input-cuota" value="1.8" step="0.1">
+                    <button onclick="fijarCuota()" style="background: #8e44ad;">FIJAR CUOTA</button>
+                </div>
+
+                <div class="admin-card">
+                    <h3>🏆 Declarar Ganador</h3>
+                    <button onclick="pagarGanadores('Rojo')" class="btn-pago-rojo">GANÓ ROJO</button>
+                    <button onclick="pagarGanadores('Empate')" class="btn-pago-gris">EMPATE</button>
+                    <button onclick="pagarGanadores('Azul')" class="btn-pago-azul">GANÓ AZUL</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay-cerrado" class="hidden closed-overlay">
+        <div class="closed-message">
+            <div style="font-size: 50px;">🔒</div>
+            <h1>APUESTAS CERRADAS</h1>
+            <p>ESPERA A LA SIGUIENTE PELEA</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
