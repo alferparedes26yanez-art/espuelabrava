@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { authService } from '@/lib/services/mock-services';
+import { authService } from '@/lib/services';
 
 export default function LoginPage() {
   const [username, setUsername] = useState('');

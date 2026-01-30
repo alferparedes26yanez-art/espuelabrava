@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { authService, fightService, betService, subscribeToChanges } from '@/lib/services/mock-services';
+import { authService, fightService, betService, subscribeToChanges } from '@/lib/services';
 import type { Usuario, EstadoPelea } from '@/types';
+import HistorialApuestasCliente from '@/app/components/HistorialApuestasCliente';
 
 export default function ClienteDashboard() {
   const router = useRouter();
@@ -158,6 +159,9 @@ export default function ClienteDashboard() {
         </div>
 
         <p className="footer-msg">Las apuestas se bloquean al llegar a cero.</p>
+        
+        {/* Historial de apuestas del cliente */}
+        <HistorialApuestasCliente username={user.user} />
       </div>
 
       {showOverlay && (

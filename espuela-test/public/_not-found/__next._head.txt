@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-2:I[16525,["/_next/static/chunks/6575c053c1c7ef87.js"],"ViewportBoundary"]
-3:I[16525,["/_next/static/chunks/6575c053c1c7ef87.js"],"MetadataBoundary"]
+2:I[16525,["/_next/static/chunks/b0de50045a13ff85.js"],"ViewportBoundary"]
+3:I[16525,["/_next/static/chunks/b0de50045a13ff85.js"],"MetadataBoundary"]
 4:"$Sreact.suspense"
-5:I[52127,["/_next/static/chunks/6575c053c1c7ef87.js"],"IconMark"]
-0:{"buildId":"acgc_QA7R6AI7dQj1IX3H","rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Espuela Brava | Premium Betting"}],["$","meta","1",{"name":"description","content":"Sistema de apuestas premium"}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.0b3bf435.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L5","3",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"loading":null,"isPartial":false}
+5:I[52127,["/_next/static/chunks/b0de50045a13ff85.js"],"IconMark"]
+0:{"buildId":"EJgUXSr_ZaBmEhgjNJLrP","rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Espuela Brava | Premium Betting"}],["$","meta","1",{"name":"description","content":"Sistema de apuestas premium"}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.0b3bf435.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L5","3",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"loading":null,"isPartial":false}

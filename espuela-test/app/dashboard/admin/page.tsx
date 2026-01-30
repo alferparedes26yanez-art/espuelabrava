@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { authService, userService, fightService, betService, subscribeToChanges } from '@/lib/services/mock-services';
+import { authService, userService, fightService, betService, subscribeToChanges } from '@/lib/services';
 import type { Usuario } from '@/types';
+import HistorialPeleasAdmin from '@/app/components/HistorialPeleasAdmin';
 
 export default function AdminDashboard() {
   const router = useRouter();
@@ -270,6 +271,9 @@ export default function AdminDashboard() {
               GANÓ AZUL
             </button>
           </div>
+
+          {/* Historial de peleas */}
+          <HistorialPeleasAdmin />
         </div>
       </div>
     </div>

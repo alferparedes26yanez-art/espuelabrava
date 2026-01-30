@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "export": "next build",
-    "export:public": "next build && rm -rf public && mkdir -p public && cp -R out/* public/"
+    "export:public": "next build && rm -rf public && mkdir -p public && cp -R out/* public/",
+    "init-firestore": "tsx scripts/init-firestore.ts"
   },
   "dependencies": {
     "firebase": "^12.8.0",
@@ -24,6 +25,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }
